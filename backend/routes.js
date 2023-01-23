@@ -1,0 +1,21 @@
+const router = require("express").Router();
+const authController = require("./controllers/auth-controller");
+const activateController = require("./controllers/activate-controller");
+const authMiddleware = require("./middlewares/auth-middleware");
+const roomsController = require("./controllers/rooms-controller");
+const postArticles = require("./models/user");
+router.get("/all", authController.getUsers);
+router.post("/api/send-otp", authController.sendOtp);
+router.post("/api/verify-otp", authController.verifyOtp);
+router.post("/api/activate", authMiddleware, activateController.activate);
+router.get("/api/refresh", authController.refresh);
+router.post("/api/logout", authMiddleware, authController.logout);
+router.post("/api/rooms", authMiddleware, roomsController.create);
+router.get("/api/rooms", authMiddleware, roomsController.index);
+router.get("/api/rooms/:roomId", authMiddleware, roomsController.show);
+router.post("/api/add", authController.addUser);
+router.get("/api/all/:id", authController.getUserById);
+router.put("/api/edit/:id", authController.editUser);
+router.delete("/api/delete/:id", authController.deleteUser);
+
+module.exports = router;

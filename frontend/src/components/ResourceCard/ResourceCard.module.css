@@ -1,0 +1,13 @@
+.card {
+  background: #1d1d1d;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  max-height: 30rem;
+  overflow-y: scroll;
+}
+.Creator {
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

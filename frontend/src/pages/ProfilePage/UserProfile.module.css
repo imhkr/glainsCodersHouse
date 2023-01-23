@@ -1,0 +1,12 @@
+.center {
+  display: flex;
+  margin-top: 8rem;
+  justify-content: center;
+}
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0px solid #0077ff;
+  margin: 0 -10px;
+  margin-right: 10px;
+}

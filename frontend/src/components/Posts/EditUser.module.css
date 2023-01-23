@@ -1,0 +1,14 @@
+.paragraph {
+  width: 70%;
+  text-align: center;
+  margin: 20px auto;
+}
+.modalMask {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+.gap {
+  margin-top: 1rem;
+}
